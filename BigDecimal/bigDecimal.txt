@@ -1,0 +1,28 @@
+public class Bill {
+    public static void main(String[] args) {
+
+
+        double[] prices = {450, 299.90, 550.75, 390, 750.90, 125, 33, 769.75};
+        double totalBill = 0;
+        double discount=0.05;
+        for (int i = 0; i < prices.length; i++) {
+
+            totalBill = totalBill + prices[i];
+
+        }
+        System.out.println("total " + totalBill);
+
+
+         double AmountOfDiscount=totalBill*discount;
+         double bill=totalBill-AmountOfDiscount;
+
+         System.out.println("bill is " + bill);
+
+        BigDecimal bigdecimal1=BigDecimal.valueOf(totalBill);
+        BigDecimal bigdecimal2=BigDecimal.valueOf(discount);
+        BigDecimal bigdecimal3=bigdecimal1.multiply(bigdecimal2);
+        BigDecimal bigdecimal4=bigdecimal1.subtract(bigdecimal3);
+        bigdecimal4= bigdecimal4.setScale (2, BigDecimal.ROUND_CEILING);
+        System.out.println("The bill is : " + bigdecimal4);
+    }
+}
