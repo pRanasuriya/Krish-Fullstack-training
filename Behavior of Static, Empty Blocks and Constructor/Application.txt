@@ -1,0 +1,40 @@
+package com.training;
+
+public class Application {
+
+    //Default constructor
+    Application(){
+
+        System.out.println("Default constructor example");
+    }
+
+    Application(int x){
+
+        System.out.println("One argument constructor example");
+    }
+
+
+    {
+
+        System.out.println("empty block example");
+
+    }
+
+
+    static {
+
+        System.out.println("static block example");
+
+    }
+
+
+
+    public static void main(String[] args) {
+
+        new Application();
+        new Application(10);
+
+    }
+
+
+}
